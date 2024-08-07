@@ -66,9 +66,9 @@ function App() {
               ))}
             </select>
           </Col>
-          <Col>Price:</Col>
+          <Col>Price</Col>
           <Col>{price}</Col>
-          <Col>Quantity:</Col>
+          <Col>Quantity</Col>
           <Col>
             <input type="number" ref={quantityRef} defaultValue={1} />
           </Col>
