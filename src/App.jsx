@@ -84,8 +84,8 @@ function App() {
           <i className="bi bi-arrow-down"></i>
         </Button>
         <span>Sort</span>
-        <DataTable 
-          data={filteredSelectedItems} 
+        <DataTable
+          data={filteredSelectedItems}
           onDelete={deleteItemByIndex}
           onSearch={search}
         />
