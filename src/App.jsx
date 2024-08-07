@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import accessoryData from "./accessory.json";
-import DataTable from "./components/DataTable";
+import DataTable from "./components/QuotationTable";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -56,7 +56,7 @@ function App() {
     <>
       <Container>
         <Row>
-          <Col xs={2}>Product:</Col>
+          <Col xs={2}>Item</Col>
           <Col xs={10}>
             <select ref={productRef} onChange={updatePrice}>
               {accessoryData.map((accessory, index) => (
@@ -66,7 +66,7 @@ function App() {
               ))}
             </select>
           </Col>
-          <Col>Price</Col>
+          <Col>Price Per Unit</Col>
           <Col>{price}</Col>
           <Col>Quantity</Col>
           <Col>
@@ -74,7 +74,7 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Button onClick={handleSubmit}>Submit</Button>
+      <Button onClick={handleSubmit}>Add</Button>
 
       <Container>
         <Button variant="link" onClick={sortAscending}>
